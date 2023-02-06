@@ -1,12 +1,17 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React, {useEffect} from 'react';
 import Home from '../home/home';
 import Pipes from '../home/pipes';
 import Paints from '../home/paints';
 import ContactUs from '../ContactUs/contactUs';
+import exitApp from '../../components/exitApp';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+  useEffect(() => {
+    exitApp();
+  }, []);
   return (
     <Tab.Navigator
       initialRouteName="FirstScreen"

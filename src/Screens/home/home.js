@@ -7,13 +7,11 @@ import {
   View,
   SafeAreaView,
 } from 'react-native';
-import exitApp from '../../components/exitApp';
+
 import {styles} from './style';
+import {Banners} from './banners'
 
 function Home() {
-  useEffect(() => {
-    exitApp();
-  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -31,6 +29,7 @@ function Home() {
             {'\n'}
             {'\n'}
           </Text>
+          <Banners/>
         </View>
       </ScrollView>
     </SafeAreaView>

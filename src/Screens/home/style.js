@@ -22,4 +22,9 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 20,
   },
+  image:{
+    height: 300,
+    width: 300,
+    alignItems:'center'
+  }
 });
