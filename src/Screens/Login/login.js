@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import {Button, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import {style} from './style';
-export const Login = () => {
+export const Login = props => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   return (
-    <View style={style.view}>
+    <View style={{flex:1, backgroundColor: '#f2dedc'}}>
+      <View style={style.login}>
+      <Text style={style.login}>Login</Text>
+      </View>
+      <View style={style.view}>
       <TextInput
         style={style.input}
         value={email}
@@ -27,10 +31,12 @@ export const Login = () => {
       />
       <View style={{flexDirection: 'row', marginTop: 20}}>
         <Text>Don't have an account? </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Register')}>
           <Text style={style.link}>Register</Text>
         </TouchableOpacity>
       </View>
+      </View>
+      
     </View>
   );
 };

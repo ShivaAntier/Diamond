@@ -6,12 +6,17 @@ import {
   ScrollView,
   View,
   SafeAreaView,
+  BackHandler,
 } from 'react-native';
 
 import {styles} from './style';
-import {Banners} from './banners'
+import {Banners} from './banners';
+import exitApp from '../../components/exitApp';
 
-function Home() {
+const Home = props => {
+  useEffect(() => {
+    exitApp();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -29,11 +34,11 @@ function Home() {
             {'\n'}
             {'\n'}
           </Text>
-          <Banners/>
+          <Banners />
         </View>
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
 export default Home;

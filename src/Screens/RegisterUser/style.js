@@ -1,22 +1,22 @@
 import {StyleSheet} from 'react-native';
 
 export const style = StyleSheet.create({
-  
-  login:{
-    flex: 2,
-    textAlign: 'center',
-    fontWeight: 'bold',
-    marginTop: 10,
-    fontSize: 30,
-  },
   view: {
     flex: 8,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop:30
   },
 
   warpper: {
     width: '80%',
+  },
+  register: {
+    flex:2,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginTop: 10,
+    fontSize: 30,
   },
 
   input: {

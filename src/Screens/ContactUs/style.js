@@ -1,9 +1,13 @@
 import {StyleSheet} from 'react-native';
 
 export const style = StyleSheet.create({
-  view: {},
+  view: {
+    flex: 2,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },
   View: {
-    flex: 1,
+    flex: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },

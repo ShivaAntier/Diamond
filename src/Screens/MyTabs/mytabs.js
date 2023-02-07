@@ -1,45 +1,72 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import React, {useEffect} from 'react';
+import React from 'react';
 import Home from '../home/home';
 import Pipes from '../home/pipes';
 import Paints from '../home/paints';
 import ContactUs from '../ContactUs/contactUs';
-import exitApp from '../../components/exitApp';
+import {View, Image} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
-  useEffect(() => {
-    exitApp();
-  }, []);
   return (
     <Tab.Navigator
-      initialRouteName="FirstScreen"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: 'absolute',
+          bottom: 10,
+          left: 20,
+          right: 20,
+          elevation: 0,
+          backgroundColor: '#ffffff',
+          borderRadius: 15,
+          height: 50,
+        },
       }}>
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
-          tabBarLabel: 'Home',
           headerShown: false,
+          tabBarIcon: ({focused}) => (
+            <View>
+              <Image
+                style={{width: 40, height: 40}}
+                source={require('D:\\Diamond\\Diamond\\src\\images\\TabBarIcons\\home.png')}
+              />
+            </View>
+          ),
         }}
       />
       <Tab.Screen
         name="Notifications"
         component={Paints}
         options={{
-          tabBarLabel: 'Paints',
           headerShown: false,
+          tabBarIcon: ({focused}) => (
+            <View>
+              <Image
+                style={{width: 40, height: 40}}
+                source={require('D:\\Diamond\\Diamond\\src\\images\\TabBarIcons\\paint.png')}
+              />
+            </View>
+          ),
         }}
       />
       <Tab.Screen
         name="Pipes"
         component={Pipes}
         options={{
-          tabBarLabel: 'Pipes',
           headerShown: false,
+          tabBarIcon: ({focused}) => (
+            <View>
+              <Image
+                style={{width: 40, height: 40}}
+                source={require('D:\\Diamond\\Diamond\\src\\images\\TabBarIcons\\pipe.png')}
+              />
+            </View>
+          ),
         }}
       />
       <Tab.Screen
@@ -48,6 +75,14 @@ function MyTabs() {
         options={{
           tabBarLabel: 'ContactUs',
           headerShown: false,
+          tabBarIcon: ({focused}) => (
+            <View>
+              <Image
+                style={{width: 40, height: 40}}
+                source={require('D:\\Diamond\\Diamond\\src\\images\\TabBarIcons\\contact.png')}
+              />
+            </View>
+          ),
         }}
       />
     </Tab.Navigator>
