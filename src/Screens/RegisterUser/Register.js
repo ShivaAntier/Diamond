@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Button,
   TouchableOpacity,
@@ -71,6 +71,7 @@ function Register(props) {
           }}>
           <TextInput
             placeholder="Confirm Password"
+            placeholderTextColor={'black'}
             style={{
               width: '95%',
               padding: 10,

@@ -15,7 +15,6 @@ function App() {
         <Stack.Screen name="home" component={MyTabs} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -7,16 +7,29 @@ import {
   View,
   SafeAreaView,
   BackHandler,
+  Button,
+  Image,
 } from 'react-native';
 
 import {styles} from './style';
 import {Banners} from './banners';
 import exitApp from '../../components/exitApp';
+import analytics from '@react-native-firebase/analytics';
 
 const Home = props => {
   useEffect(() => {
+    console.log('testkdflajdsffads');
     exitApp();
   }, []);
+  function imageSVG() {
+    return (
+      <Image
+        source={{
+          uri: 'https://metadata.unstoppabledomains.com/image-src/guptasiddharth.blockchain.svg',
+        }}
+      />
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -35,6 +48,20 @@ const Home = props => {
             {'\n'}
           </Text>
           <Banners />
+          {/* <Button title="click" onPress={imageSVG()} /> */}
+        </View>
+        <View>
+          <Button
+            title="Add To Basket"
+            onPress={async () =>
+              await analytics().logEvent('basket', {
+                id: 3745092,
+                item: 'mens grey t-shirt',
+                description: ['round neck', 'long sleeved'],
+                size: 'L',
+              })
+            }
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

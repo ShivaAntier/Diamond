@@ -1,6 +1,14 @@
 import React from 'react';
-import {Button, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {
+  Button,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+  Image,
+} from 'react-native';
 import {style} from './style';
+import {SvgUri} from 'react-native-svg';
 
 const ContactUS = props => {
   return (
@@ -16,6 +24,11 @@ const ContactUS = props => {
           placeholder="Please tell us your query!"
         />
         <Button title="submit" />
+        <SvgUri
+          width="100%"
+          height="100%"
+          uri="https://metadata%2Eunstoppabledomains%2Ecom/image-src/guptasiddharth%2Eblockchain.svg"
+        />
         <View style={{flexDirection: 'row', marginTop: 20}}>
           <Text>Join with us to make the world more beautiful. </Text>
           <TouchableOpacity

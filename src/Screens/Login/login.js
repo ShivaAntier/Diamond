@@ -26,7 +26,6 @@ export const Login = props => {
       <Button
         title="submit"
         onPress={() => {
-          this.submit();
         }}
       />
       <View style={{flexDirection: 'row', marginTop: 20}}>

@@ -1,0 +1,12 @@
+export const primarybackgroundColorWhite = '#FFFFFF';
+export const primaryGreen = '#14AC63';
+export const primaryBlack = '#000000';
+export const shadowColorGreen = '#14AC6333';
+export const primaryWhite = '#FFFFFF';
+export const primaryRed = '#EA4335';
+export const facebookBlue = '#3B5998';
+export const fadedBlack = '#262626';
+export const fadedBlackLight = '#707070';
+export const borderColorLightGray = '#E5E5E5';
+export const fadedTextBlack = '#3A3A3A';
+export const placeholderTextColor = '#727272';
